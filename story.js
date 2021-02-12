@@ -17,6 +17,8 @@ var config = {
 
 
     //Storymap chapters start here.
+
+    //Chapter 1
     chapters: [
       {
           id: 'Wolf-story-chapter-1',
@@ -29,6 +31,7 @@ var config = {
                       pitch: 56.50,
                       bearing: -22.57
           },
+          //Choose which layers are visible when entering/exiting this chapter.
           onChapterEnter: [
 
               {
@@ -57,6 +60,7 @@ var config = {
           ]
       },
 
+    //Chapter 2
         {
             id: 'Wolf-Story-Chapter-2',
             //Background on the species of wolf in Kootenay national park. Extent of kootenay national park,
@@ -71,6 +75,7 @@ var config = {
                         pitch: 0.00,
                         bearing: -4.76
             },
+            //Choose which layers are visible when entering/exiting this chapter.
             onChapterEnter: [
                  {
                      layer: 'WolfPoints',
@@ -85,18 +90,21 @@ var config = {
             ]
         },
 
+    //Chapter 3
         {
               id: 'Wolf-story-chapter-3',
               title: 'Chapter 3:  Highway 93',
               image: 'images/hwy.png',
               description: 'Highway 93 otherwise known as the Icefields Parkway runs from Jasper, Alberta south into the Northwestern United States. This road was built parallel to the continental divide and offers almost 230 kilometers of spectacular mountainous views (Highway 93…, Icefields Parkway). The highway is fully paved with wide shoulders and a maximum speed of 90 km/hr (Tips for…, Banff and Beyond).',
 
+              //Define the location of the
               location: {
                 center: { lon: -116.15278, lat: 51.00962 },
                           zoom: 10.44,
                           pitch: 1.50,
                           bearing: -39.14
               },
+              //Choose which layers are visible when entering/exiting this chapter.
               onChapterEnter: [
                    {
                        layer: 'route93-2',
@@ -123,10 +131,12 @@ var config = {
               ]
             },
 
+            //Chapter 4
           {
                 id: 'Wolf-story-chapter-4',
                 title: 'Chapter 4: Wolf Mortality',
                 image: 'images/hwywolf.png',
+                //Chart included in the description
                 description: 'Unfortunately, as the wolves often travel near the highway, wolves and other wildlife being struck by vehicles is a common occurance (Calgary Herald, 2014).<canvas id="myChart" width="400" height="400"></canvas>',
                 location: {
                   center: { lon: -116.11113, lat: 51.21970 },
@@ -151,12 +161,16 @@ var config = {
                     // }
                 ]
               },
+
+              //Chapter 5
               {
 
                   id: 'Wolf-story-chapter-5',
                   title: 'Chapter 5: Adaptations',
                   image: 'images/underpass.png',
+                  //Hyperlink and embedded video included in the description
                   description: 'Thankfully, some changes have been implemented regarding the safety of wolves in surrounding parks such as Yoho and Banff National Parks. Kootenay has followed suit with the creation of <a href=https://calgaryherald.com/news/kootenay-national-park-gets-funding-to-reduce-wildlife-collisions-on-highway-93-s> animal underpasses </a> in 2013. Similar projects in nearby parks such as Banff National Park have shown promising results, where wildlife vehicle collisions have decreased by 80% since the implementation of these programs (Calgary Herald, 2014).<iframe width="350" height="200" src="https://www.youtube.com/embed/ND0D3bVbM7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+
                   location: {
                     center: { lon: -115.95490, lat: 50.99710 },
                               zoom: 13.91,
