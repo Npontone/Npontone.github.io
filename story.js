@@ -155,7 +155,7 @@ var config = {
 
                   id: 'Wolf-story-chapter-5',
                   title: 'Chapter 5: Adaptations',
-                  image: 'images/hwywolf.png',
+                  image: 'images/underpass.png',
                   description: 'Thankfully, some changes have been implemented regarding the safety of wolves in surrounding parks such as Yoho and Banff National Parks. Kootenay has followed suit with the creation of <a href=https://calgaryherald.com/news/kootenay-national-park-gets-funding-to-reduce-wildlife-collisions-on-highway-93-s> animal underpasses </a> in 2013. Similar projects in nearby parks such as Banff National Park have shown promising results, where wildlife vehicle collisions have decreased by 80% since the implementation of these programs (Calgary Herald, 2014).<iframe width="350" height="200" src="https://www.youtube.com/embed/ND0D3bVbM7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
                   location: {
                     center: { lon: -115.95490, lat: 50.99710 },
