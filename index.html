@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nick Pontone | Academic Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -88,9 +89,8 @@
     }
     .gallery a {
       display: block;
-      overflow: hidden;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
     .gallery img {
       width: 100%;
@@ -152,16 +152,19 @@
       <section>
         <h2>Photography</h2>
         <div class="gallery">
-          <a href="images/DSCF0016.jpg" target="_blank"><img src="images/photo1.jpg" alt="Transmission Tower"></a>
-          <a href="images/DSCF9978.JPG" target="_blank"><img src="images/photo2.jpg" alt="Sphagnum Moss"></a>
-          <a href="images/DSCF9991.JPG" target="_blank"><img src="images/photo3.jpg" alt="Northern Purple Pitcher Plant"></a>
+          <a href="images/DSCF0016.jpg" data-lightbox="gallery" data-title="Transmission Tower"><img src="images/DSCF0016.jpg" alt="Photo of a transmission tower"></a>
+          <a href="images/DSCF9978.JPG" data-lightbox="gallery" data-title="Sphagnum Moss"><img src="images/DSCF9978.JPG" alt="Photo of Sphagnum moss"></a>
+          <a href="images/DSCF9991.JPG" data-lightbox="gallery" data-title="Northern Purple Pitcher Plant"><img src="images/DSCF9991.JPG" alt="photo of a Northern Purple Pitcher Plant3"></a>
         </div>
       </section>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 Nicholas Pontone | Last updated July 2025
+    &copy; 2025 Nicholas Pontone | Last updated December 2025
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
+
