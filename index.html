@@ -16,17 +16,32 @@
     header {
       background: #003366;
       color: white;
-      padding: 2rem 0;
+      padding: 2rem 0 1rem;
       text-align: center;
     }
     header img {
-      width: 300px;
-      height: 300px;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid white;
       margin-bottom: 1rem;
-      }
+    }
+    nav {
+      background: #002244;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     main {
       max-width: 900px;
       margin: 2rem auto;
@@ -52,7 +67,7 @@
     ul {
       padding-left: 1.2rem;
     }
-.cv-link {
+    .cv-link {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.5rem 1rem;
@@ -60,49 +75,81 @@
       color: #ffffff;
       text-decoration: none;
       border-radius: 5px;
-}
-.cv-link:hover {
-background-color: #0055a5;
-}
+    }
+    .cv-link:hover {
+      background-color: #0055a5;
+    }
+    .page { display: none; }
+    .page.active { display: block; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
   </style>
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = () => showPage('profile');
+  </script>
 </head>
 <body>
   <header>
     <h1>Nick Pontone</h1>
-    <img src="profile.jpg" alt="Nick Pontone">
-    <p>PhD Student | Department of Geography and Environmental Studies | Carleton University </p>
+    <img src="images/profile.jpg" alt="Nick Pontone">
+    <p>PhD Student | Department of Geography and Environmental Studies | Carleton University</p>
     <a class="cv-link" href="cv.pdf" download>Download CV (PDF)</a>
   </header>
+
+  <nav>
+    <a href="#" onclick="showPage('profile')">Academic Profile</a>
+    <a href="#" onclick="showPage('photography')">Photography</a>
+  </nav>
+
   <main>
-    <section id="bio">
-      <h2>About Me</h2>
-      <p>
-       
-I am a PhD student in the Department of Geography and Environmental Studies at Carleton University. I hold an undergraduate degree in Geomatics, and a Master's of Science in Geography. My work often focuses on the relationships between peatland ecohydrological characteristics and wildfires. I like to take a big data approach to problems employing multi-sensor (SAR, InSAR, optical, spaceborne lidar), machine learning, and time-series analysis techniques. Currently, I am investigating SAR applications in peatlands to develop improved soil moisture models. By linking satellite observations with field measurements through radiative transfer modeling, I aim to improve our understanding of these interactions by disentangling the confounding effects of soil moisture, vegetation, and surface roughness on the observed backscatter signal. This research will enhance our ability to retrieve biophysical parameters from peatlands, improving our understanding of greenhouse gas fluxes, fire susceptibility, and post-fire emissions.
+    <div id="profile" class="page">
+      <section id="bio">
+        <h2>About Me</h2>
+        <p>I am a PhD student in the Department of Geography and Environmental Studies at Carleton University. I hold an undergraduate degree in Geomatics, and a Master's of Science in Geography. My work often focuses on the relationships between peatland ecohydrological characteristics and wildfires. I like to take a big data approach to problems employing multi-sensor (SAR, InSAR, optical, spaceborne lidar), machine learning, and time-series analysis techniques. Currently, I am investigating SAR applications in peatlands to develop improved soil moisture models. By linking satellite observations with field measurements through radiative transfer modeling, I aim to improve our understanding of these interactions by disentangling the confounding effects of soil moisture, vegetation, and surface roughness on the observed backscatter signal. This research will enhance our ability to retrieve biophysical parameters from peatlands, improving our understanding of greenhouse gas fluxes, fire susceptibility, and post-fire emissions.</p>
+      </section>
 
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>L.K. Webster, M. Strack, ... N. Pontone, ... (2023). <em>Data and knowledge needs for improving science and policy for peatlands in Canada...</em> FACETS</li>
+          <li>N. Pontone, K. Millard, ... (2025). <em>A Hierarchical Multi-Sensor Framework for Peatland Sub-Class and Vegetation Mapping...</em> Remote Sensing in Ecology and Conservation</li>
+        </ul>
+      </section>
 
-      </p>
-    </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Research Scientist</strong>, Terra Motion Canada, 2024</li>
+          <li><strong>Research Affiliate</strong>, Natural Resources Canada, Canadian Geodetic Survey, 2024</li>
+          <li><strong>Research Assistant</strong>, Natural Resources Canada, Space Weather Group, 2019–2020</li>
+        </ul>
+      </section>
+    </div>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li> L.K. Webster, M. Strack, N. Balliston, M. Davies, K. Hettinga, M. Hunter, K. Kleinke, M. Schmidt, C. Barreto, Bird. Melaine, K. Blann, B. Kelly, A. Cassidy, J. Connolly, S. Davidson, L. Fedorchuck, M. Garneau, L. Harris, H. He, S. Howie, A. Kirkwood, N. Pontone, K. Richardson, N. Sanderson, G. Seutin, B. Xu, X. Yin. FACETS  (2023). <em>Data and knowledge needs for improving science and policy for peatlands in Canada in a changing world: Insights from Global Peatlands Initiative Workshop</em>. FACETS </li>
-        <li> N. Pontone, K. Millard, D.K Thompson, L. Guindon, A. Beaudoin (2025). <em> A Hierarchical Multi-Sensor Framework for Peatland Sub-Class and Vegetation Mapping Throughout the Canadian Boreal Forest </em>. Remote Sensing in Ecology and Conservation</li>
-        <!-- Add more as needed -->
-      </ul>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Research Scientist</strong>, Terra Motion Canada, 2024</li>
-        <li><strong>Research Affiliate </strong>, Natural Resources Canada, Canadian Geodetic Survey, 2024 </li>
-        <li><strong>Research Assisstant </strong>, Natural Resources Canada, Space Weather Group, 2019-2020 </li>
-        <!-- Add more as needed -->
-      </ul>
-    </section>
+    <div id="photography" class="page">
+      <section>
+        <h2>Photography</h2>
+        <div class="gallery">
+          <img src="images/photo1.jpg" alt="Photo 1">
+          <img src="images/photo2.jpg" alt="Photo 2">
+          <img src="images/photo3.jpg" alt="Photo 3">
+        </div>
+      </section>
+    </div>
   </main>
+
   <footer>
     &copy; 2025 Nicholas Pontone | Last updated July 2025
   </footer>
