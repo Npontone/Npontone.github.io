@@ -20,8 +20,8 @@
       text-align: center;
     }
     header img {
-      width: 120px;
-      height: 120px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid white;
@@ -83,13 +83,23 @@
     .page.active { display: block; }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1rem;
+    }
+    .gallery a {
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .gallery img {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
   <script>
@@ -142,9 +152,9 @@
       <section>
         <h2>Photography</h2>
         <div class="gallery">
-          <img src="images/DSCF0016.jpg" alt="Transmission Tower">
-          <img src="images/DSCF9978.JPG" alt="Sphagnum Moss">
-          <img src="images/DSCF9991.JPG" alt="Northern Purple Pitcher Plant">
+          <a href="images/DSCF0016.jpg" target="_blank"><img src="images/photo1.jpg" alt="Transmission Tower"></a>
+          <a href="images/DSCF9978.JPG" target="_blank"><img src="images/photo2.jpg" alt="Sphagnum Moss"></a>
+          <a href="images/DSCF9991.JPG" target="_blank"><img src="images/photo3.jpg" alt="Northern Purple Pitcher Plant"></a>
         </div>
       </section>
     </div>
